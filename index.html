@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odin Form Validation</title>
+    <script src="./validation.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <!-- Build a browser form which collects Email, Country, Zip Code, 
+    Password and Password Confirmation fields.  -->
+  <body>
+    <header class="hero">
+      <h1 class="hero-text">User data form</h1>
+      <form action="" class="user-form">
+        <div class="form--group email-group">
+          <label for="email">Email Address <span>*</span> </label>
+          <input
+            id="email"
+            name="email"
+            class="email-input"
+            type="text"
+            placeholder="john@doe.com"
+          />
+          <p class="error-hint invisible">That is not a valid email!</p>
+        </div>
+        <hr />
+        <button type="submit" class="form--submit-Btn">Submit</button>
+      </form>
+    </header>
+  </body>
+</html>
