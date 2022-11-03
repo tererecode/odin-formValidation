@@ -23,8 +23,12 @@ body {
   );
 }
 
+.user-form {
+  padding-top: 1.5rem;
+}
+
 .form--group {
-  margin: 2rem 3rem;
+  margin: 1rem 3rem;
 }
 
 .form--group label {
@@ -36,15 +40,48 @@ body {
 .form--group input {
   padding: 0.5rem;
   border-radius: 5px;
-  border-color: #333;
+
+  border: 1px solid #333;
   width: clamp(150px, 350px, 50%);
+}
+
+.form--group input:invalid {
+  border: 1px solid red;
+  outline-color: red;
+  animation-name: horizontal-shaking;
+  animation-duration: 200ms;
+  animation-iteration-count: 1;
+}
+
+.error-hint {
+  font-size: 0.75rem;
+  color: red;
+  margin: 0.125rem;
+}
+
+@keyframes horizontal-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 hr {
   background: rgba(2, 0, 36);
   height: 1px;
   border: none;
-  margin-block: 1rem;
+  margin-block: 2rem 1rem;
 }
 
 .form--submit-Btn {
@@ -63,4 +100,15 @@ hr {
   background: rgba(2, 0, 36);
 
   border: 1px solid black;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.thank-you-msg {
+  display: none;
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
 }
