@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+.hero-text {
+  margin: 0;
+  padding: 3rem;
+  color: whitesmoke;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(68, 94, 189, 1) 43%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.form--group {
+  margin: 2rem 3rem;
+}
+
+.form--group label {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form--group input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border-color: #333;
+  width: clamp(150px, 350px, 50%);
+}
+
+hr {
+  background: rgba(2, 0, 36);
+  height: 1px;
+  border: none;
+  margin-block: 1rem;
+}
+
+.form--submit-Btn {
+  margin: 0 3rem;
+  font-size: 1.1rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(51, 51, 51, 0.1);
+  padding: 0.25rem 2rem;
+  transition: all 100ms ease-in-out;
+}
+
+.form--submit-Btn:hover {
+  color: whitesmoke;
+  background: rgba(2, 0, 36);
+
+  border: 1px solid black;
+}
