@@ -24,11 +24,56 @@
             type="text"
             placeholder="john@doe.com"
           />
-          <p class="error-hint invisible">That is not a valid email!</p>
+          <p class="error-hint invisible"></p>
+        </div>
+        <div class="form--group country-group">
+          <label for="country">Country <span>*</span> </label>
+          <input
+            id="country"
+            name="country"
+            class="country-input"
+            type="text"
+            placeholder="United States"
+          />
+          <p class="error-hint invisible"></p>
+        </div>
+        <div class="form--group zip-code-group">
+          <label for="zip">Zip Code <span>*</span> </label>
+          <input
+            id="zip"
+            name="zip"
+            class="zip-input"
+            type="tel"
+            placeholder="123 123123"
+          />
+          <p class="error-hint invisible"></p>
+        </div>
+        <div class="form--group password-group">
+          <label for="password">Password <span>*</span> </label>
+          <input
+            id="password"
+            name="password"
+            class="pass-input"
+            type="password"
+            placeholder="********"
+          />
+          <p class="error-hint invisible"></p>
+        </div>
+        <div class="form--group password-confirm-group">
+          <label for="passwordConfirm">Confirm Password <span>*</span> </label>
+          <input
+            id="passwordConfirm"
+            name="passwordConfirm"
+            class="pass-input"
+            type="password"
+            placeholder="********"
+          />
+          <p class="error-hint invisible"></p>
         </div>
         <hr />
         <button type="submit" class="form--submit-Btn">Submit</button>
       </form>
+      <div class="thank-you-msg">Thank you!</div>
     </header>
   </body>
 </html>
