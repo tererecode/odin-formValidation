@@ -2,9 +2,10 @@ const form = document.querySelector(".user-form");
 
 const formValidator = (e) => {
   e.preventDefault();
-  inputs.forEach((input) => {
+  inputs.forEach((input, index) => {
     input.focus();
     input.blur();
+    console.log(e.target[index].validity);
   });
   if (form.checkValidity()) {
     form.remove();
@@ -65,6 +66,7 @@ const checkIfValidNumber = (input, inputTypeName) => {
 const checkValidPassword = (input, inputTypeName) => {
   if (input.value.length < 8) {
     let errorHint = `${inputTypeName} should be at leat 8 characters!`;
+    input.setCustomValidity(`Please enter a valid ${inputTypeName}!`);
     invalidInput(input, errorHint);
   }
   let passConfirmInput = inputs.find(
@@ -78,7 +80,8 @@ const checkValidPassword = (input, inputTypeName) => {
 const checkPasswordMatch = (input, inputTypeName) => {
   let prevInput = inputs.find((input) => input.name === "password");
   if (input.value != prevInput.value) {
-    let errorHint = `${inputTypeName} does not match!`;
+    let errorHint = `${prevInput.name} does not match!`;
+    input.setCustomValidity(`${prevInput.name} have to match!`);
     invalidInput(input, errorHint);
   } else {
     return true;
